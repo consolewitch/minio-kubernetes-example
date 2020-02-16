@@ -1,0 +1,26 @@
+## this file is commented out because it is not necessary when using docker for desktop's Kubernetes
+
+#apiVersion: v1
+#kind: PersistentVolume
+#metadata:
+#  name: minio-persistent-volume
+#  labels:
+#    app: minio
+#spec:
+#  capacity:
+#    storage: 5Gi
+#  accessModes:
+#    - ReadWriteOnce
+#  persistentVolumeReclaimPolicy: Retain
+#  claimRef:
+#    namespace: minio-ns
+#    name: minio-claim
+#  storageClassName: standard
+#  local:
+#    path: /minio
+#  nodeAffinity:
+#    required:
+#      nodeSelectorTerms:
+#      - matchExpressions:
+#        - key: kubernetes.io/hostname
+#          operator: Exists

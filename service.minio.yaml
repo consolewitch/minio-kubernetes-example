@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: minio
+  namespace: minio-ns
+  labels:
+    app: minio
+spec:
+  type:  LoadBalancer
+  ports:
+    - name: minio-port
+      port: 9001
+      targetPort: 9001
+      protocol: TCP

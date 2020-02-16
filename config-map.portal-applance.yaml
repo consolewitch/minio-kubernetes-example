@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: minio-cm
+  namespace: minio-ns
+  labels:
+    app: minio
+data:
+    minio_setting: "foo"
